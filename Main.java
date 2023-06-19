@@ -12,7 +12,10 @@ public class Main {
             System.out.println("1. Registrazione");
             System.out.println("2. Login");
             System.out.println("3. Stampa database");
-            System.out.println("4. Uscire");
+            System.out.println("4. Elimina user");
+            System.out.println("5. Modifica username");
+            System.out.println("6. Visualizza lista utenti");
+            System.out.println("7. Uscire");
             System.out.print("Seleziona un'opzione: ");
             scelta = scanner.nextInt();
             switch (scelta) {
@@ -37,6 +40,15 @@ public class Main {
                     bancaCentrale.stampaDatabase();
                     break;
                 case 4:
+                    bancaCentrale.deleteUser();
+                    break;
+                case 5:
+                    bancaCentrale.modifyUser();
+                    break;
+                case 6:
+                    bancaCentrale.readUser();
+                    break;
+                case 7:
                     System.out.println("Grazie e arrivederci");
                     return;
 
@@ -44,6 +56,6 @@ public class Main {
                     System.out.println("Non hai inserito una scelta giusta");
                     break;
             }
-        } while (scelta != 4);
+        } while (scelta != 7);
     }
 }
