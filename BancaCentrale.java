@@ -214,6 +214,9 @@ public class BancaCentrale {
                 currentUser = currentUsername;
                 System.out.println("Username aggiunto correttamente");
                 break;
+            } else {
+                System.out.println("Accesso non consentito");
+                break;
             }
         }
 
@@ -230,10 +233,12 @@ public class BancaCentrale {
 
             for (int i = 0; i < username.size(); i++) {
                 String currentUsername = username.get(i);
-                System.out.println("Username: "+i + ": "+currentUsername);
-                
+                System.out.println("Username: " + i + ": " + currentUsername);
+
             }
+        } else {
+            System.out.println("Accesso non consentito");
+
         }
     }
 }
-
